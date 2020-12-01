@@ -1,0 +1,23 @@
+.main-logo {
+    height: 40px;
+    display:block;
+}
+
+.app-root,
+mat-drawer-container {
+    height: 100%;
+    display: block;
+}
+
+.sidenav-list {
+    min-width: 200px;
+}
+
+.main-menu-trigger {
+    position: absolute;
+    left: 0;
+}
+
+.header-toolbar  {
+    justify-content: center;
+}
