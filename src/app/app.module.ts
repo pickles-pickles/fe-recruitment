@@ -12,11 +12,13 @@ import { MatListModule } from "@angular/material/list";
 import { MatIconModule } from "@angular/material/icon";
 
 import { HomepageComponent } from "./homepage/homepage.component";
+import { ThumbnailComponent } from './thumbnail/thumbnail.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		HomepageComponent
+		HomepageComponent,
+		ThumbnailComponent
 	],
 	imports: [
 		BrowserModule,
