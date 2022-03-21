@@ -5,6 +5,11 @@ This is a demo app used during our FE recruitment process
 ```
 npm install
 ```
+if there are dependency problems, please run again the command with the `--legacy-peer-deps` flag
+```
+npm install --legacy-peer-deps
+```
+
 and after that
 ```
 npm run build
