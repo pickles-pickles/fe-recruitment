@@ -10,12 +10,14 @@ import { stateInterface } from '../app.state'
   styleUrls: ['./counter-text.component.scss']
 })
 export class CounterTextComponent implements OnInit {
-  constructor (private store: Store<stateInterface>) {}
+  constructor (private store: Store<{ app: stateInterface }>) {}
 
-  counterValue$!: Observable<number>
+  counter?: number
 
   ngOnInit (): void {
-    this.counterValue$ = this.store.pipe(select(state => state.counter))
-    console.log('counter is', this.counterValue$)
+    this.store.select('app').subscribe(data => {
+      this.counter = data.counter
+    })
+    console.log('counter is', this.counter)
   }
 }
