@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-root',
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'fe-obg-live-coding-app';
+  title = 'fe-obg-live-coding-app'
   links = [
     {
       text: 'Home',
@@ -15,6 +15,10 @@ export class AppComponent {
     {
       text: 'List',
       url: '/list'
+    },
+    {
+      text: 'Counter',
+      url: '/counter'
     }
-  ];
+  ]
 }
