@@ -12,12 +12,15 @@ import { stateInterface } from '../app.state'
 export class CounterTextComponent implements OnInit {
   constructor (private store: Store<{ app: stateInterface }>) {}
 
-  counter?: number
+  counter!: number
+  counter$!: Observable<{ counter: number }>
 
   ngOnInit (): void {
     this.store.select('app').subscribe(data => {
       this.counter = data.counter
     })
-    console.log('counter is', this.counter)
+
+    this.counter$ = this.store.select('app')
+    console.log('counter is', this.counter, 'counter$ is', this.counter$)
   }
 }
